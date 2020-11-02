@@ -1,0 +1,612 @@
+2020-11-02 14:29:33.462 +01:00 [INF] Application Starting.
+2020-11-02 14:29:36.385 +01:00 [INF] User profile is available. Using 'C:\Users\private\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-02 14:29:36.787 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-02 14:29:36.788 +01:00 [INF] Hosting environment: Development
+2020-11-02 14:29:36.788 +01:00 [INF] Content root path: C:\Users\private\source\repos\PetStore\PetStore
+2020-11-02 14:29:36.861 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/index.html  
+2020-11-02 14:29:37.244 +01:00 [INF] Request GET /index.html => 200
+2020-11-02 14:29:37.286 +01:00 [INF] Request finished in 430.5623ms 200 text/html;charset=utf-8
+2020-11-02 14:29:37.593 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/swagger/v1/swagger.json  
+2020-11-02 14:29:37.812 +01:00 [INF] Request GET /swagger/v1/swagger.json => 200
+2020-11-02 14:29:37.813 +01:00 [INF] Request finished in 219.8054ms 200 application/json;charset=utf-8
+2020-11-02 14:29:51.800 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product/5  
+2020-11-02 14:29:51.810 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Get (PetStore)'
+2020-11-02 14:29:51.849 +01:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 14:29:52.064 +01:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
+2020-11-02 14:29:52.577 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 14:29:52.853 +01:00 [INF] Executed DbCommand (18ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review", "b"."BrandId", "b"."Name"
+FROM "Products" AS "p"
+LEFT JOIN "Brands" AS "b" ON "p"."BrandId" = "b"."BrandId"
+WHERE "p"."ProductId" = @__productId_0
+LIMIT 1
+2020-11-02 14:29:52.881 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2020-11-02 14:29:52.897 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Get (PetStore) in 1043.7497ms
+2020-11-02 14:29:52.897 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Get (PetStore)'
+2020-11-02 14:29:52.898 +01:00 [INF] Request GET /api/Product/5 => 404
+2020-11-02 14:29:52.900 +01:00 [INF] Request finished in 1100.1079ms 404 application/problem+json; charset=utf-8
+2020-11-02 14:56:29.116 +01:00 [INF] Application Starting.
+2020-11-02 14:56:30.368 +01:00 [INF] User profile is available. Using 'C:\Users\private\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-02 14:56:30.619 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-02 14:56:30.624 +01:00 [INF] Hosting environment: Development
+2020-11-02 14:56:30.624 +01:00 [INF] Content root path: C:\Users\private\source\repos\PetStore\PetStore
+2020-11-02 14:56:30.656 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/index.html  
+2020-11-02 14:56:30.829 +01:00 [INF] Request GET /index.html => 200
+2020-11-02 14:56:30.835 +01:00 [INF] Request finished in 180.6057ms 200 text/html;charset=utf-8
+2020-11-02 14:56:30.972 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/swagger/v1/swagger.json  
+2020-11-02 14:56:31.093 +01:00 [INF] Request GET /swagger/v1/swagger.json => 200
+2020-11-02 14:56:31.094 +01:00 [INF] Request finished in 121.6415ms 200 application/json;charset=utf-8
+2020-11-02 14:56:43.348 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product  
+2020-11-02 14:56:43.354 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 14:56:43.393 +01:00 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(PetStore.Queries.QueryParameters, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 14:56:43.587 +01:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
+2020-11-02 14:56:44.004 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 14:56:44.287 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."ProductId", "t"."Name", "t"."Description", "t"."Review", "t"."Price", "t"."Amount", "t"."ImagePath", "t"."BrandId", "b"."Name" AS "BrandName"
+FROM (
+    SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review"
+    FROM "Products" AS "p"
+    ORDER BY (SELECT 1)
+    LIMIT @__p_1 OFFSET @__p_0
+) AS "t"
+LEFT JOIN "Brands" AS "b" ON "t"."BrandId" = "b"."BrandId"
+2020-11-02 14:56:44.311 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Products" AS "p"
+2020-11-02 14:56:44.318 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Queries.PagedList`1[[PetStore.Models.ProductModel, PetStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-02 14:56:44.335 +01:00 [INF] Executed action PetStore.ApiController.ProductController.GetAll (PetStore) in 936.9129ms
+2020-11-02 14:56:44.335 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 14:56:44.335 +01:00 [INF] Request GET /api/Product => 200
+2020-11-02 14:56:44.337 +01:00 [INF] Request finished in 989.0973ms 200 application/json; charset=utf-8
+2020-11-02 15:19:09.839 +01:00 [INF] Application Starting.
+2020-11-02 15:19:11.060 +01:00 [INF] User profile is available. Using 'C:\Users\private\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-02 15:19:11.280 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-02 15:19:11.285 +01:00 [INF] Hosting environment: Development
+2020-11-02 15:19:11.286 +01:00 [INF] Content root path: C:\Users\private\source\repos\PetStore\PetStore
+2020-11-02 15:19:11.321 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/index.html  
+2020-11-02 15:19:11.500 +01:00 [INF] Request finished in 182.0608ms 200 text/html;charset=utf-8
+2020-11-02 15:19:11.631 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/swagger/v1/swagger.json  
+2020-11-02 15:19:11.748 +01:00 [INF] Request finished in 117.1805ms 200 application/json;charset=utf-8
+2020-11-02 15:19:22.359 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product  
+2020-11-02 15:19:22.366 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 15:19:22.403 +01:00 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(PetStore.Queries.QueryParameters, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 15:19:22.595 +01:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
+2020-11-02 15:19:23.007 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 15:19:23.280 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."ProductId", "t"."Name", "t"."Description", "t"."Review", "t"."Price", "t"."Amount", "t"."ImagePath", "t"."BrandId", "b"."Name" AS "BrandName"
+FROM (
+    SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review"
+    FROM "Products" AS "p"
+    ORDER BY (SELECT 1)
+    LIMIT @__p_1 OFFSET @__p_0
+) AS "t"
+LEFT JOIN "Brands" AS "b" ON "t"."BrandId" = "b"."BrandId"
+2020-11-02 15:19:23.300 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Products" AS "p"
+2020-11-02 15:19:23.306 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Queries.PagedList`1[[PetStore.Models.ProductModel, PetStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-02 15:19:23.322 +01:00 [INF] Executed action PetStore.ApiController.ProductController.GetAll (PetStore) in 913.6086ms
+2020-11-02 15:19:23.322 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 15:19:23.324 +01:00 [INF] Request finished in 965.7725ms 200 application/json; charset=utf-8
+2020-11-02 16:37:25.328 +01:00 [INF] Application Starting.
+2020-11-02 16:37:26.891 +01:00 [INF] User profile is available. Using 'C:\Users\private\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-02 16:37:27.119 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-02 16:37:27.120 +01:00 [INF] Hosting environment: Development
+2020-11-02 16:37:27.120 +01:00 [INF] Content root path: C:\Users\private\source\repos\PetStore\PetStore
+2020-11-02 16:37:27.162 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/index.html  
+2020-11-02 16:37:27.328 +01:00 [INF] Request finished in 168.9809ms 404 
+2020-11-02 18:00:22.063 +01:00 [INF] Application Starting.
+2020-11-02 18:00:23.624 +01:00 [INF] User profile is available. Using 'C:\Users\private\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-02 18:00:23.989 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-02 18:00:23.989 +01:00 [INF] Hosting environment: Development
+2020-11-02 18:00:23.989 +01:00 [INF] Content root path: C:\Users\private\source\repos\PetStore\PetStore
+2020-11-02 18:00:24.019 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/index.html  
+2020-11-02 18:00:24.185 +01:00 [INF] Request finished in 168.8381ms 200 text/html;charset=utf-8
+2020-11-02 18:00:24.400 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/swagger/v1/swagger.json  
+2020-11-02 18:00:24.517 +01:00 [INF] Request finished in 117.9529ms 200 application/json;charset=utf-8
+2020-11-02 18:01:21.042 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product?Page=1&PageSize=1  
+2020-11-02 18:01:21.049 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 18:01:21.089 +01:00 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(PetStore.Queries.QueryParameters, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:01:21.291 +01:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
+2020-11-02 18:01:21.701 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:01:21.958 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."ProductId", "t"."Name", "t"."Description", "t"."Review", "t"."Price", "t"."Amount", "t"."ImagePath", "t"."BrandId", "b"."Name" AS "BrandName"
+FROM (
+    SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review"
+    FROM "Products" AS "p"
+    ORDER BY (SELECT 1)
+    LIMIT @__p_1 OFFSET @__p_0
+) AS "t"
+LEFT JOIN "Brands" AS "b" ON "t"."BrandId" = "b"."BrandId"
+2020-11-02 18:01:21.974 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Products" AS "p"
+2020-11-02 18:01:21.979 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Queries.PagedList`1[[PetStore.Models.ProductModel, PetStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-02 18:01:21.992 +01:00 [INF] Executed action PetStore.ApiController.ProductController.GetAll (PetStore) in 898.8667ms
+2020-11-02 18:01:21.992 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 18:01:21.994 +01:00 [INF] Request finished in 951.7118ms 200 application/json; charset=utf-8
+2020-11-02 18:01:40.651 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:64544/api/Product application/json 260
+2020-11-02 18:01:40.662 +01:00 [INF] Authorization failed.
+2020-11-02 18:01:40.665 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2020-11-02 18:01:40.667 +01:00 [INF] Request finished in 17.5942ms 401 
+2020-11-02 18:03:42.594 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:64544/api/Product application/json 229
+2020-11-02 18:03:42.729 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:03:42.732 +01:00 [INF] Authorization was successful.
+2020-11-02 18:03:42.734 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Add (PetStore)'
+2020-11-02 18:03:42.736 +01:00 [INF] Route matched with {action = "Add", controller = "Product"}. Executing controller action with signature Void Add(PetStore.Models.ProductModel, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:03:42.771 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2020-11-02 18:03:42.776 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Add (PetStore) in 39.7749ms
+2020-11-02 18:03:42.776 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Add (PetStore)'
+2020-11-02 18:03:42.777 +01:00 [INF] Request finished in 183.6531ms 400 application/problem+json; charset=utf-8
+2020-11-02 18:03:54.341 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:64544/api/Product application/json 176
+2020-11-02 18:03:54.342 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:03:54.344 +01:00 [INF] Authorization was successful.
+2020-11-02 18:03:54.345 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Add (PetStore)'
+2020-11-02 18:03:54.345 +01:00 [INF] Route matched with {action = "Add", controller = "Product"}. Executing controller action with signature Void Add(PetStore.Models.ProductModel, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:03:54.413 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:03:54.426 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__brandId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Brands" AS "b"
+    WHERE "b"."BrandId" = @__brandId_0)
+2020-11-02 18:03:54.434 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."CategoryId"
+FROM "Categories" AS "c"
+2020-11-02 18:04:11.508 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 43), @p3='?', @p4='?' (Size = 11), @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Amount", "BrandId", "Description", "ImagePath", "Name", "Price", "Review")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT "ProductId"
+FROM "Products"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2020-11-02 18:04:11.519 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p7='?', @p8='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ProductCategories" ("ProductId", "CategoryId")
+VALUES (@p7, @p8);
+2020-11-02 18:04:11.538 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Add (PetStore) in 17192.0684ms
+2020-11-02 18:04:11.538 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Add (PetStore)'
+2020-11-02 18:04:11.539 +01:00 [INF] Request finished in 17198.2151ms 200 
+2020-11-02 18:05:31.305 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:64544/api/Product application/json 165
+2020-11-02 18:05:31.306 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:05:31.307 +01:00 [INF] Authorization was successful.
+2020-11-02 18:05:31.307 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Add (PetStore)'
+2020-11-02 18:05:31.307 +01:00 [INF] Route matched with {action = "Add", controller = "Product"}. Executing controller action with signature Void Add(PetStore.Models.ProductModel, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:05:31.321 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:05:31.340 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[@__brandId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Brands" AS "b"
+    WHERE "b"."BrandId" = @__brandId_0)
+2020-11-02 18:05:31.342 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."CategoryId"
+FROM "Categories" AS "c"
+2020-11-02 18:05:37.237 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 35), @p3='?', @p4='?' (Size = 10), @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Amount", "BrandId", "Description", "ImagePath", "Name", "Price", "Review")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT "ProductId"
+FROM "Products"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2020-11-02 18:05:37.238 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p7='?', @p8='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ProductCategories" ("ProductId", "CategoryId")
+VALUES (@p7, @p8);
+2020-11-02 18:05:37.245 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Add (PetStore) in 5938.3206ms
+2020-11-02 18:05:37.246 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Add (PetStore)'
+2020-11-02 18:05:37.247 +01:00 [INF] Request finished in 5966.3492ms 200 
+2020-11-02 18:05:48.396 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:64544/api/Product application/json 164
+2020-11-02 18:05:48.398 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:05:48.399 +01:00 [INF] Authorization was successful.
+2020-11-02 18:05:48.399 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Add (PetStore)'
+2020-11-02 18:05:48.399 +01:00 [INF] Route matched with {action = "Add", controller = "Product"}. Executing controller action with signature Void Add(PetStore.Models.ProductModel, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:05:48.404 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:05:48.408 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__brandId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Brands" AS "b"
+    WHERE "b"."BrandId" = @__brandId_0)
+2020-11-02 18:05:48.410 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."CategoryId"
+FROM "Categories" AS "c"
+2020-11-02 18:05:48.414 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 35), @p3='?', @p4='?' (Size = 9), @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Amount", "BrandId", "Description", "ImagePath", "Name", "Price", "Review")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT "ProductId"
+FROM "Products"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2020-11-02 18:05:48.414 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p7='?', @p8='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ProductCategories" ("ProductId", "CategoryId")
+VALUES (@p7, @p8);
+2020-11-02 18:05:48.424 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Add (PetStore) in 24.7156ms
+2020-11-02 18:05:48.424 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Add (PetStore)'
+2020-11-02 18:05:48.425 +01:00 [INF] Request finished in 29.7468ms 200 
+2020-11-02 18:05:57.219 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product?Page=1&PageSize=1  
+2020-11-02 18:05:57.221 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:05:57.221 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 18:05:57.221 +01:00 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(PetStore.Queries.QueryParameters, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:05:57.225 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:05:57.234 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."ProductId", "t"."Name", "t"."Description", "t"."Review", "t"."Price", "t"."Amount", "t"."ImagePath", "t"."BrandId", "b"."Name" AS "BrandName"
+FROM (
+    SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review"
+    FROM "Products" AS "p"
+    ORDER BY (SELECT 1)
+    LIMIT @__p_1 OFFSET @__p_0
+) AS "t"
+LEFT JOIN "Brands" AS "b" ON "t"."BrandId" = "b"."BrandId"
+2020-11-02 18:05:57.238 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Products" AS "p"
+2020-11-02 18:05:57.239 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Queries.PagedList`1[[PetStore.Models.ProductModel, PetStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-02 18:05:57.242 +01:00 [INF] Executed action PetStore.ApiController.ProductController.GetAll (PetStore) in 20.4486ms
+2020-11-02 18:05:57.242 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 18:05:57.242 +01:00 [INF] Request finished in 23.3127ms 200 application/json; charset=utf-8
+2020-11-02 18:06:05.169 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product?Paging=false&Page=1&PageSize=1  
+2020-11-02 18:06:05.171 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:06:05.171 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 18:06:05.171 +01:00 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(PetStore.Queries.QueryParameters, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:06:05.175 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:06:05.189 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."Name", "p"."Description", "p"."Review", "p"."Price", "p"."Amount", "p"."ImagePath", "p"."BrandId", "b"."Name" AS "BrandName"
+FROM "Products" AS "p"
+LEFT JOIN "Brands" AS "b" ON "p"."BrandId" = "b"."BrandId"
+2020-11-02 18:06:05.192 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Products" AS "p"
+2020-11-02 18:06:05.193 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Queries.PagedList`1[[PetStore.Models.ProductModel, PetStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-02 18:06:05.193 +01:00 [INF] Executed action PetStore.ApiController.ProductController.GetAll (PetStore) in 21.9019ms
+2020-11-02 18:06:05.193 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 18:06:05.194 +01:00 [INF] Request finished in 24.4436ms 200 application/json; charset=utf-8
+2020-11-02 18:06:21.625 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product?Paging=false&Page=1&PageSize=1&Search=snack  
+2020-11-02 18:06:21.626 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:06:21.626 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 18:06:21.626 +01:00 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(PetStore.Queries.QueryParameters, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:06:21.628 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:06:21.646 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."Name", "p"."Description", "p"."Review", "p"."Price", "p"."Amount", "p"."ImagePath", "p"."BrandId", "b"."Name" AS "BrandName"
+FROM "Products" AS "p"
+LEFT JOIN "Brands" AS "b" ON "p"."BrandId" = "b"."BrandId"
+WHERE "p"."Name" LIKE @__p_1
+2020-11-02 18:06:21.651 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Products" AS "p"
+2020-11-02 18:06:21.653 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Queries.PagedList`1[[PetStore.Models.ProductModel, PetStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-02 18:06:21.654 +01:00 [INF] Executed action PetStore.ApiController.ProductController.GetAll (PetStore) in 27.178ms
+2020-11-02 18:06:21.654 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 18:06:21.654 +01:00 [INF] Request finished in 29.4209ms 200 application/json; charset=utf-8
+2020-11-02 18:07:13.581 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product/2  
+2020-11-02 18:07:13.588 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:07:13.589 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Get (PetStore)'
+2020-11-02 18:07:13.591 +01:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:07:13.595 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:07:13.628 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review", "b"."BrandId", "b"."Name"
+FROM "Products" AS "p"
+LEFT JOIN "Brands" AS "b" ON "p"."BrandId" = "b"."BrandId"
+WHERE "p"."ProductId" = @__productId_0
+LIMIT 1
+2020-11-02 18:07:13.659 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."CategoryId", "c"."CategoryId", "c"."Description", "c"."Name", "c"."SuperCategoryId"
+FROM "ProductCategories" AS "p"
+INNER JOIN "Categories" AS "c" ON "p"."CategoryId" = "c"."CategoryId"
+WHERE "p"."ProductId" = @__productId_0
+2020-11-02 18:07:13.662 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Models.ProductModel'.
+2020-11-02 18:07:13.663 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Get (PetStore) in 72.0443ms
+2020-11-02 18:07:13.664 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Get (PetStore)'
+2020-11-02 18:07:13.664 +01:00 [INF] Request finished in 82.5808ms 200 application/json; charset=utf-8
+2020-11-02 18:08:29.309 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:64544/api/Product/2 application/json 248
+2020-11-02 18:08:29.313 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:08:29.313 +01:00 [INF] Authorization was successful.
+2020-11-02 18:08:29.314 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Edit (PetStore)'
+2020-11-02 18:08:29.319 +01:00 [INF] Route matched with {action = "Edit", controller = "Product"}. Executing controller action with signature Void Edit(Int32, PetStore.Models.ProductModel, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:08:29.321 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2020-11-02 18:08:29.322 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Edit (PetStore) in 2.7013ms
+2020-11-02 18:08:29.322 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Edit (PetStore)'
+2020-11-02 18:08:29.323 +01:00 [INF] Request finished in 14.24ms 400 application/problem+json; charset=utf-8
+2020-11-02 18:08:48.485 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:64544/api/Product/2 application/json 192
+2020-11-02 18:08:48.487 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:08:48.487 +01:00 [INF] Authorization was successful.
+2020-11-02 18:08:48.487 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Edit (PetStore)'
+2020-11-02 18:08:48.488 +01:00 [INF] Route matched with {action = "Edit", controller = "Product"}. Executing controller action with signature Void Edit(Int32, PetStore.Models.ProductModel, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:08:48.494 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:08:48.495 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review", "b"."BrandId", "b"."Name"
+FROM "Products" AS "p"
+LEFT JOIN "Brands" AS "b" ON "p"."BrandId" = "b"."BrandId"
+WHERE "p"."ProductId" = @__productId_0
+LIMIT 1
+2020-11-02 18:08:48.499 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."CategoryId"
+FROM "ProductCategories" AS "p"
+WHERE "p"."ProductId" = @__productId_0
+2020-11-02 18:08:48.502 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."CategoryId"
+FROM "Categories" AS "c"
+2020-11-02 18:08:55.315 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ProductCategories" ("ProductId", "CategoryId")
+VALUES (@p0, @p1);
+2020-11-02 18:08:55.316 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p7='?', @p0='?', @p1='?', @p2='?' (Size = 43), @p3='?', @p4='?' (Size = 9), @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Products" SET "Amount" = @p0, "BrandId" = @p1, "Description" = @p2, "ImagePath" = @p3, "Name" = @p4, "Price" = @p5, "Review" = @p6
+WHERE "ProductId" = @p7;
+SELECT changes();
+2020-11-02 18:08:55.325 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Edit (PetStore) in 6837.0825ms
+2020-11-02 18:08:55.325 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Edit (PetStore)'
+2020-11-02 18:08:55.326 +01:00 [INF] Request finished in 6840.4172ms 200 
+2020-11-02 18:09:11.228 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product/2  
+2020-11-02 18:09:11.229 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:09:11.229 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Get (PetStore)'
+2020-11-02 18:09:11.229 +01:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:09:11.232 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:09:11.236 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review", "b"."BrandId", "b"."Name"
+FROM "Products" AS "p"
+LEFT JOIN "Brands" AS "b" ON "p"."BrandId" = "b"."BrandId"
+WHERE "p"."ProductId" = @__productId_0
+LIMIT 1
+2020-11-02 18:09:11.242 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."CategoryId", "c"."CategoryId", "c"."Description", "c"."Name", "c"."SuperCategoryId"
+FROM "ProductCategories" AS "p"
+INNER JOIN "Categories" AS "c" ON "p"."CategoryId" = "c"."CategoryId"
+WHERE "p"."ProductId" = @__productId_0
+2020-11-02 18:09:11.246 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Models.ProductModel'.
+2020-11-02 18:09:11.249 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Get (PetStore) in 19.2044ms
+2020-11-02 18:09:11.250 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Get (PetStore)'
+2020-11-02 18:09:11.252 +01:00 [INF] Request finished in 21.922ms 200 application/json; charset=utf-8
+2020-11-02 18:09:22.328 +01:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:64544/api/Product/3  
+2020-11-02 18:09:22.330 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:09:22.332 +01:00 [INF] Authorization was successful.
+2020-11-02 18:09:22.332 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Delete (PetStore)'
+2020-11-02 18:09:22.336 +01:00 [INF] Route matched with {action = "Delete", controller = "Product"}. Executing controller action with signature Void Delete(Int32, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:09:22.340 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:09:22.342 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review", "b"."BrandId", "b"."Name"
+FROM "Products" AS "p"
+LEFT JOIN "Brands" AS "b" ON "p"."BrandId" = "b"."BrandId"
+WHERE "p"."ProductId" = @__productId_0
+LIMIT 1
+2020-11-02 18:09:22.343 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."CategoryId", "c"."CategoryId", "c"."Description", "c"."Name", "c"."SuperCategoryId"
+FROM "ProductCategories" AS "p"
+INNER JOIN "Categories" AS "c" ON "p"."CategoryId" = "c"."CategoryId"
+WHERE "p"."ProductId" = @__productId_0
+2020-11-02 18:09:22.351 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?'], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "ProductCategories"
+WHERE "ProductId" = @p0 AND "CategoryId" = @p1;
+SELECT changes();
+2020-11-02 18:09:22.352 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?'], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Products"
+WHERE "ProductId" = @p2;
+SELECT changes();
+2020-11-02 18:09:22.358 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Delete (PetStore) in 21.5229ms
+2020-11-02 18:09:22.358 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Delete (PetStore)'
+2020-11-02 18:09:22.359 +01:00 [INF] Request finished in 36.4258ms 200 
+2020-11-02 18:09:30.703 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product/2  
+2020-11-02 18:09:30.705 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:09:30.705 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Get (PetStore)'
+2020-11-02 18:09:30.705 +01:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:09:30.707 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:09:30.710 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review", "b"."BrandId", "b"."Name"
+FROM "Products" AS "p"
+LEFT JOIN "Brands" AS "b" ON "p"."BrandId" = "b"."BrandId"
+WHERE "p"."ProductId" = @__productId_0
+LIMIT 1
+2020-11-02 18:09:30.713 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."CategoryId", "c"."CategoryId", "c"."Description", "c"."Name", "c"."SuperCategoryId"
+FROM "ProductCategories" AS "p"
+INNER JOIN "Categories" AS "c" ON "p"."CategoryId" = "c"."CategoryId"
+WHERE "p"."ProductId" = @__productId_0
+2020-11-02 18:09:30.714 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Models.ProductModel'.
+2020-11-02 18:09:30.715 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Get (PetStore) in 9.4964ms
+2020-11-02 18:09:30.715 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Get (PetStore)'
+2020-11-02 18:09:30.715 +01:00 [INF] Request finished in 11.6429ms 200 application/json; charset=utf-8
+2020-11-02 18:09:41.585 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product/3  
+2020-11-02 18:09:41.586 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:09:41.586 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Get (PetStore)'
+2020-11-02 18:09:41.586 +01:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:09:41.588 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:09:41.590 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review", "b"."BrandId", "b"."Name"
+FROM "Products" AS "p"
+LEFT JOIN "Brands" AS "b" ON "p"."BrandId" = "b"."BrandId"
+WHERE "p"."ProductId" = @__productId_0
+LIMIT 1
+2020-11-02 18:09:41.591 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2020-11-02 18:09:41.593 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Get (PetStore) in 5.9092ms
+2020-11-02 18:09:41.593 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Get (PetStore)'
+2020-11-02 18:09:41.593 +01:00 [INF] Request finished in 8.1345ms 404 application/problem+json; charset=utf-8
+2020-11-02 18:10:35.109 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:64544/api/Product application/json 174
+2020-11-02 18:10:35.116 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:10:35.117 +01:00 [INF] Authorization was successful.
+2020-11-02 18:10:35.117 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.Add (PetStore)'
+2020-11-02 18:10:35.117 +01:00 [INF] Route matched with {action = "Add", controller = "Product"}. Executing controller action with signature Void Add(PetStore.Models.ProductModel, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:10:35.121 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:10:35.127 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__brandId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Brands" AS "b"
+    WHERE "b"."BrandId" = @__brandId_0)
+2020-11-02 18:10:35.129 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."CategoryId"
+FROM "Categories" AS "c"
+2020-11-02 18:10:35.136 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 47), @p3='?', @p4='?' (Size = 7), @p5='?', @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Amount", "BrandId", "Description", "ImagePath", "Name", "Price", "Review")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT "ProductId"
+FROM "Products"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2020-11-02 18:10:35.137 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p7='?', @p8='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ProductCategories" ("ProductId", "CategoryId")
+VALUES (@p7, @p8);
+2020-11-02 18:10:35.152 +01:00 [INF] Executed action PetStore.ApiController.ProductController.Add (PetStore) in 34.9475ms
+2020-11-02 18:10:35.152 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.Add (PetStore)'
+2020-11-02 18:10:35.153 +01:00 [INF] Request finished in 43.6535ms 200 
+2020-11-02 18:10:55.845 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Order  
+2020-11-02 18:10:55.870 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:10:55.870 +01:00 [INF] Authorization was successful.
+2020-11-02 18:10:55.870 +01:00 [INF] Executing endpoint 'PetStore.ApiController.OrderController.Get (PetStore)'
+2020-11-02 18:10:55.872 +01:00 [INF] Route matched with {action = "Get", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(PetStore.Queries.QueryParameters, PetStore.Services.IServices.IOrderService) on controller PetStore.ApiController.OrderController (PetStore).
+2020-11-02 18:10:55.874 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:10:55.881 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."OrderId", "o"."Date", "o"."CustomerFirstName", "o"."CustomerLastName", "o"."CustomerAddress", "o"."CustomerCreditCardNumber"
+FROM "Orders" AS "o"
+ORDER BY (SELECT 1)
+LIMIT @__p_1 OFFSET @__p_0
+2020-11-02 18:10:55.883 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Orders" AS "o"
+2020-11-02 18:10:55.883 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Queries.PagedList`1[[PetStore.Models.OrderModel, PetStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-02 18:10:55.886 +01:00 [INF] Executed action PetStore.ApiController.OrderController.Get (PetStore) in 14.0818ms
+2020-11-02 18:10:55.886 +01:00 [INF] Executed endpoint 'PetStore.ApiController.OrderController.Get (PetStore)'
+2020-11-02 18:10:55.887 +01:00 [INF] Request finished in 42.2596ms 200 application/json; charset=utf-8
+2020-11-02 18:12:27.753 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:64544/api/Order application/json 176
+2020-11-02 18:12:27.760 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:12:27.760 +01:00 [INF] Executing endpoint 'PetStore.ApiController.OrderController.Post (PetStore)'
+2020-11-02 18:12:27.761 +01:00 [INF] Route matched with {action = "Post", controller = "Order"}. Executing controller action with signature Void Post(PetStore.Models.OrderModel, PetStore.Services.IServices.IOrderService) on controller PetStore.ApiController.OrderController (PetStore).
+2020-11-02 18:12:27.784 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:12:27.785 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review", "b"."BrandId", "b"."Name"
+FROM "Products" AS "p"
+LEFT JOIN "Brands" AS "b" ON "p"."BrandId" = "b"."BrandId"
+WHERE "p"."ProductId" = @__productId_0
+LIMIT 1
+2020-11-02 18:12:45.115 +01:00 [INF] Executing JsonResult, writing value of type 'System.Collections.Generic.List`1[[PetStore.Exceptions.ErrorMessage, PetStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-02 18:12:45.117 +01:00 [INF] Executed action PetStore.ApiController.OrderController.Post (PetStore) in 17355.7625ms
+2020-11-02 18:12:45.118 +01:00 [INF] Executed endpoint 'PetStore.ApiController.OrderController.Post (PetStore)'
+2020-11-02 18:12:45.118 +01:00 [INF] Request finished in 17364.5689ms 400 application/json; charset=utf-8
+2020-11-02 18:12:50.636 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:64544/api/Order application/json 175
+2020-11-02 18:12:50.637 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:12:50.637 +01:00 [INF] Executing endpoint 'PetStore.ApiController.OrderController.Post (PetStore)'
+2020-11-02 18:12:50.638 +01:00 [INF] Route matched with {action = "Post", controller = "Order"}. Executing controller action with signature Void Post(PetStore.Models.OrderModel, PetStore.Services.IServices.IOrderService) on controller PetStore.ApiController.OrderController (PetStore).
+2020-11-02 18:12:50.642 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:12:50.644 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review", "b"."BrandId", "b"."Name"
+FROM "Products" AS "p"
+LEFT JOIN "Brands" AS "b" ON "p"."BrandId" = "b"."BrandId"
+WHERE "p"."ProductId" = @__productId_0
+LIMIT 1
+2020-11-02 18:12:59.918 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 17), @p1='?' (Size = 12), @p2='?' (Size = 4), @p3='?' (Size = 8), @p4='?', @p5='?' (Size = 1)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Orders" ("CustomerAddress", "CustomerCreditCardNumber", "CustomerFirstName", "CustomerLastName", "Date", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT "OrderId"
+FROM "Orders"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2020-11-02 18:12:59.919 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p6='?', @p7='?', @p8='?', @p9='?', @p10='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OrderItems" ("OrderItemId", "OrderId", "Amount", "ProductId", "UnitPrice")
+VALUES (@p6, @p7, @p8, @p9, @p10);
+2020-11-02 18:12:59.927 +01:00 [INF] Executed action PetStore.ApiController.OrderController.Post (PetStore) in 9288.8811ms
+2020-11-02 18:12:59.927 +01:00 [INF] Executed endpoint 'PetStore.ApiController.OrderController.Post (PetStore)'
+2020-11-02 18:12:59.927 +01:00 [INF] Request finished in 9291.0042ms 200 
+2020-11-02 18:13:07.491 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Order  
+2020-11-02 18:13:07.492 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:13:07.493 +01:00 [INF] Authorization was successful.
+2020-11-02 18:13:07.493 +01:00 [INF] Executing endpoint 'PetStore.ApiController.OrderController.Get (PetStore)'
+2020-11-02 18:13:07.493 +01:00 [INF] Route matched with {action = "Get", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(PetStore.Queries.QueryParameters, PetStore.Services.IServices.IOrderService) on controller PetStore.ApiController.OrderController (PetStore).
+2020-11-02 18:13:07.495 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:13:07.496 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."OrderId", "o"."Date", "o"."CustomerFirstName", "o"."CustomerLastName", "o"."CustomerAddress", "o"."CustomerCreditCardNumber"
+FROM "Orders" AS "o"
+ORDER BY (SELECT 1)
+LIMIT @__p_1 OFFSET @__p_0
+2020-11-02 18:13:07.517 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Orders" AS "o"
+2020-11-02 18:13:07.518 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Queries.PagedList`1[[PetStore.Models.OrderModel, PetStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-02 18:13:07.523 +01:00 [INF] Executed action PetStore.ApiController.OrderController.Get (PetStore) in 30.0429ms
+2020-11-02 18:13:07.523 +01:00 [INF] Executed endpoint 'PetStore.ApiController.OrderController.Get (PetStore)'
+2020-11-02 18:13:07.523 +01:00 [INF] Request finished in 32.1519ms 200 application/json; charset=utf-8
+2020-11-02 18:13:21.958 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Order/1  
+2020-11-02 18:13:21.958 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:13:21.958 +01:00 [INF] Authorization was successful.
+2020-11-02 18:13:21.958 +01:00 [INF] Executing endpoint 'PetStore.ApiController.OrderController.Get (PetStore)'
+2020-11-02 18:13:21.960 +01:00 [INF] Route matched with {action = "Get", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32, PetStore.Services.IServices.IOrderService) on controller PetStore.ApiController.OrderController (PetStore).
+2020-11-02 18:13:21.970 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:13:21.980 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."OrderId", "o"."CustomerAddress", "o"."CustomerCreditCardNumber", "o"."CustomerFirstName", "o"."CustomerLastName", "o"."Date", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__orderId_0
+LIMIT 1
+2020-11-02 18:13:21.998 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."OrderItemId", "o"."OrderId", "o"."Amount", "o"."ProductId", "o"."UnitPrice", "o0"."OrderId", "o0"."CustomerAddress", "o0"."CustomerCreditCardNumber", "o0"."CustomerFirstName", "o0"."CustomerLastName", "o0"."Date", "o0"."Status"
+FROM "OrderItems" AS "o"
+INNER JOIN "Orders" AS "o0" ON "o"."OrderId" = "o0"."OrderId"
+WHERE "o"."OrderId" = @__orderId_0
+2020-11-02 18:13:21.999 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Models.OrderModel'.
+2020-11-02 18:13:22.001 +01:00 [INF] Executed action PetStore.ApiController.OrderController.Get (PetStore) in 40.9935ms
+2020-11-02 18:13:22.001 +01:00 [INF] Executed endpoint 'PetStore.ApiController.OrderController.Get (PetStore)'
+2020-11-02 18:13:22.001 +01:00 [INF] Request finished in 43.562ms 200 application/json; charset=utf-8
+2020-11-02 18:18:30.205 +01:00 [INF] Application Starting.
+2020-11-02 18:18:31.441 +01:00 [INF] User profile is available. Using 'C:\Users\private\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-02 18:18:31.687 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-02 18:18:31.687 +01:00 [INF] Hosting environment: Development
+2020-11-02 18:18:31.687 +01:00 [INF] Content root path: C:\Users\private\source\repos\PetStore\PetStore
+2020-11-02 18:18:31.727 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/index.html  
+2020-11-02 18:18:31.914 +01:00 [INF] Request finished in 190.9069ms 200 text/html;charset=utf-8
+2020-11-02 18:18:32.041 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/swagger/v1/swagger.json  
+2020-11-02 18:18:32.170 +01:00 [INF] Request finished in 128.6583ms 200 application/json;charset=utf-8
+2020-11-02 18:19:07.118 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Order  
+2020-11-02 18:19:07.260 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:19:07.264 +01:00 [INF] Authorization was successful.
+2020-11-02 18:19:07.264 +01:00 [INF] Executing endpoint 'PetStore.ApiController.OrderController.Get (PetStore)'
+2020-11-02 18:19:07.303 +01:00 [INF] Route matched with {action = "Get", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(PetStore.Queries.QueryParameters, PetStore.Services.IServices.IOrderService) on controller PetStore.ApiController.OrderController (PetStore).
+2020-11-02 18:19:07.481 +01:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
+2020-11-02 18:19:07.870 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:19:08.088 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."OrderId", "o"."Date", "o"."CustomerFirstName", "o"."CustomerLastName", "o"."CustomerAddress", "o"."CustomerCreditCardNumber"
+FROM "Orders" AS "o"
+ORDER BY (SELECT 1)
+LIMIT @__p_1 OFFSET @__p_0
+2020-11-02 18:19:08.115 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Orders" AS "o"
+2020-11-02 18:19:08.120 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Queries.PagedList`1[[PetStore.Models.OrderModel, PetStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-02 18:19:08.137 +01:00 [INF] Executed action PetStore.ApiController.OrderController.Get (PetStore) in 830.1209ms
+2020-11-02 18:19:08.137 +01:00 [INF] Executed endpoint 'PetStore.ApiController.OrderController.Get (PetStore)'
+2020-11-02 18:19:08.139 +01:00 [INF] Request finished in 1024.3269ms 200 application/json; charset=utf-8
+2020-11-02 18:19:20.422 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Order/1  
+2020-11-02 18:19:20.424 +01:00 [INF] Successfully validated the token.
+2020-11-02 18:19:20.426 +01:00 [INF] Authorization was successful.
+2020-11-02 18:19:20.426 +01:00 [INF] Executing endpoint 'PetStore.ApiController.OrderController.Get (PetStore)'
+2020-11-02 18:19:20.430 +01:00 [INF] Route matched with {action = "Get", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32, PetStore.Services.IServices.IOrderService) on controller PetStore.ApiController.OrderController (PetStore).
+2020-11-02 18:19:20.462 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:19:20.494 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."OrderId", "o"."CustomerAddress", "o"."CustomerCreditCardNumber", "o"."CustomerFirstName", "o"."CustomerLastName", "o"."Date", "o"."Status"
+FROM "Orders" AS "o"
+WHERE "o"."OrderId" = @__orderId_0
+LIMIT 1
+2020-11-02 18:19:20.574 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__orderId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."OrderItemId", "o"."OrderId", "o"."Amount", "o"."ProductId", "o"."UnitPrice", "o0"."OrderId", "o0"."CustomerAddress", "o0"."CustomerCreditCardNumber", "o0"."CustomerFirstName", "o0"."CustomerLastName", "o0"."Date", "o0"."Status", "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review"
+FROM "OrderItems" AS "o"
+INNER JOIN "Orders" AS "o0" ON "o"."OrderId" = "o0"."OrderId"
+INNER JOIN "Products" AS "p" ON "o"."ProductId" = "p"."ProductId"
+WHERE "o"."OrderId" = @__orderId_0
+2020-11-02 18:19:20.577 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Models.OrderModel'.
+2020-11-02 18:19:20.580 +01:00 [INF] Executed action PetStore.ApiController.OrderController.Get (PetStore) in 149.6468ms
+2020-11-02 18:19:20.580 +01:00 [INF] Executed endpoint 'PetStore.ApiController.OrderController.Get (PetStore)'
+2020-11-02 18:19:20.580 +01:00 [INF] Request finished in 158.0121ms 200 application/json; charset=utf-8
+2020-11-02 18:21:57.629 +01:00 [INF] Application Starting.
+2020-11-02 18:21:58.988 +01:00 [INF] User profile is available. Using 'C:\Users\private\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-02 18:21:59.321 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-02 18:21:59.331 +01:00 [INF] Hosting environment: Development
+2020-11-02 18:21:59.331 +01:00 [INF] Content root path: C:\Users\private\source\repos\PetStore\PetStore
+2020-11-02 18:21:59.372 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/index.html  
+2020-11-02 18:21:59.683 +01:00 [INF] Request finished in 314.8562ms 200 text/html;charset=utf-8
+2020-11-02 18:21:59.801 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/swagger/v1/swagger.json  
+2020-11-02 18:21:59.908 +01:00 [INF] Request finished in 107.2814ms 200 application/json;charset=utf-8
+2020-11-02 18:22:08.601 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:64544/api/Product  
+2020-11-02 18:22:08.608 +01:00 [INF] Executing endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 18:22:08.649 +01:00 [INF] Route matched with {action = "GetAll", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(PetStore.Queries.QueryParameters, PetStore.Services.IServices.IProductService) on controller PetStore.ApiController.ProductController (PetStore).
+2020-11-02 18:22:08.879 +01:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Remove the 'AddEntityFramework*' call as in most cases it's not needed and might cause conflicts with other products and services registered in the same service provider.
+2020-11-02 18:22:09.373 +01:00 [INF] Entity Framework Core 3.1.9 initialized 'PetStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2020-11-02 18:22:09.682 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."ProductId", "t"."Name", "t"."Description", "t"."Review", "t"."Price", "t"."Amount", "t"."ImagePath", "t"."BrandId", "b"."Name" AS "BrandName"
+FROM (
+    SELECT "p"."ProductId", "p"."Amount", "p"."BrandId", "p"."Description", "p"."ImagePath", "p"."Name", "p"."Price", "p"."Review"
+    FROM "Products" AS "p"
+    ORDER BY (SELECT 1)
+    LIMIT @__p_1 OFFSET @__p_0
+) AS "t"
+LEFT JOIN "Brands" AS "b" ON "t"."BrandId" = "b"."BrandId"
+2020-11-02 18:22:09.708 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Products" AS "p"
+2020-11-02 18:22:09.715 +01:00 [INF] Executing ObjectResult, writing value of type 'PetStore.Queries.PagedList`1[[PetStore.Models.ProductModel, PetStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-02 18:22:09.733 +01:00 [INF] Executed action PetStore.ApiController.ProductController.GetAll (PetStore) in 1079.5252ms
+2020-11-02 18:22:09.733 +01:00 [INF] Executed endpoint 'PetStore.ApiController.ProductController.GetAll (PetStore)'
+2020-11-02 18:22:09.736 +01:00 [INF] Request finished in 1134.9001ms 200 application/json; charset=utf-8
