@@ -92,7 +92,15 @@ namespace PetStore.Services
 		{
 			var newOrderItems = new List<OrderItemEntity>();
 
-			foreach (var orderItem in model.Items)
+			var groupOrderItemModels = model.Items
+				.GroupBy(x => x.ProductId)
+				.Select(gr => new OrderItemModel
+				{
+					ProductId = gr.Key,
+					Amount = gr.Sum(x => x.Amount)
+				});
+
+			foreach (var orderItem in groupOrderItemModels)
 			{
 				var newOrderItem = orderItem.Adapt<OrderItemEntity>();
 				newOrderItem.OrderId = newOrder.OrderId;
@@ -106,6 +114,9 @@ namespace PetStore.Services
 				newOrderItem.UnitPrice = newOrderItem.Product.Price;
 
 				orderItemValidator.Validate(newOrderItem);
+
+				newOrderItem.Product.Amount -= newOrderItem.Amount;
+
 				newOrderItems.Add(newOrderItem);
 			}
 

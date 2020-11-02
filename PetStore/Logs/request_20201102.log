@@ -3,3 +3,16 @@
 2020-11-02 21:30:32.894 +01:00 [INF] Request DELETE /api/Product/5 => 401
 2020-11-02 21:30:50.614 +01:00 [INF] Request GET /index.html => 200
 2020-11-02 21:30:50.920 +01:00 [INF] Request GET /swagger/v1/swagger.json => 200
+2020-11-02 22:00:30.102 +01:00 [INF] Request GET /index.html => 200
+2020-11-02 22:00:30.422 +01:00 [INF] Request GET /swagger/v1/swagger.json => 200
+2020-11-02 22:01:24.306 +01:00 [INF] Request POST /api/Auth/SignUp => 200
+2020-11-02 22:01:41.486 +01:00 [INF] Request POST /api/Auth/SignIn => 200
+2020-11-02 22:02:20.187 +01:00 [INF] Request GET /api/Order => 200
+2020-11-02 22:25:48.724 +01:00 [INF] Request GET /index.html => 200
+2020-11-02 22:25:49.029 +01:00 [INF] Request GET /swagger/v1/swagger.json => 200
+2020-11-02 22:26:23.778 +01:00 [INF] Request GET /api/Product => 200
+2020-11-02 22:27:58.166 +01:00 [INF] Request POST /api/Order => 200
+2020-11-02 22:28:11.581 +01:00 [INF] Request GET /api/Product/1 => 200
+2020-11-02 22:28:52.610 +01:00 [INF] Request POST /api/Order => 400
+2020-11-02 22:29:12.263 +01:00 [INF] Request POST /api/Order => 200
+2020-11-02 22:29:18.631 +01:00 [INF] Request GET /api/Product/1 => 200

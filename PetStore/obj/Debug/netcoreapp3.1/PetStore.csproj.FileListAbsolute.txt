@@ -162,3 +162,4 @@ C:\Users\private\source\repos\PetStore\PetStore\obj\Debug\netcoreapp3.1\PetStore
 C:\Users\private\source\repos\PetStore\PetStore\obj\Debug\netcoreapp3.1\PetStore.csproj.CopyComplete
 C:\Users\private\source\repos\PetStore\PetStore\obj\Debug\netcoreapp3.1\PetStore.dll
 C:\Users\private\source\repos\PetStore\PetStore\obj\Debug\netcoreapp3.1\PetStore.pdb
+C:\Users\private\source\repos\PetStore\PetStore\obj\Debug\netcoreapp3.1\PetStore.csprojAssemblyReference.cache
