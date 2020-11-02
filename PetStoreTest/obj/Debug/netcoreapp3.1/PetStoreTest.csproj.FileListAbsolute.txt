@@ -77,6 +77,7 @@ C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Seri
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Serilog.Filters.Expressions.dll
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
@@ -86,6 +87,7 @@ C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\SQLi
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Superpower.dll
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\private\source\repos\PetStore\PetStoreTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

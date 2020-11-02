@@ -1587,6 +1587,19 @@
           "lib/netstandard2.0/Serilog.Extensions.Logging.dll": {}
         }
       },
+      "Serilog.Filters.Expressions/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.9.0",
+          "Superpower": "2.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Filters.Expressions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Filters.Expressions.dll": {}
+        }
+      },
       "Serilog.Formatting.Compact/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -1753,6 +1766,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        }
+      },
+      "Superpower/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Superpower.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Superpower.dll": {}
         }
       },
       "Swashbuckle.AspNetCore/5.6.3": {
@@ -3426,6 +3448,9 @@
           "Microsoft.Extensions.Identity.Stores": "3.1.9",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
           "Serilog.AspNetCore": "3.4.0",
+          "Serilog.Filters.Expressions": "2.1.0",
+          "Serilog.Settings.Configuration": "3.1.0",
+          "Serilog.Sinks.File": "4.1.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "System.IdentityModel.Tokens.Jwt": "6.8.0"
         },
@@ -5643,6 +5668,23 @@
         "serilog.extensions.logging.nuspec"
       ]
     },
+    "Serilog.Filters.Expressions/2.1.0": {
+      "sha512": "e0ZaK+NWx6+j71xB5dRXohdreSeHgMJ9mp4giSp83/4UC8VsJWDH+CAT1YVXsyINAR9IQznXllnJ0e5j+BvwzA==",
+      "type": "package",
+      "path": "serilog.filters.expressions/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Serilog.Filters.Expressions.dll",
+        "lib/net45/Serilog.Filters.Expressions.xml",
+        "lib/netstandard1.5/Serilog.Filters.Expressions.dll",
+        "lib/netstandard1.5/Serilog.Filters.Expressions.xml",
+        "lib/netstandard2.0/Serilog.Filters.Expressions.dll",
+        "lib/netstandard2.0/Serilog.Filters.Expressions.xml",
+        "serilog.filters.expressions.2.1.0.nupkg.sha512",
+        "serilog.filters.expressions.nuspec"
+      ]
+    },
     "Serilog.Formatting.Compact/1.1.0": {
       "sha512": "pNroKVjo+rDqlxNG5PXkRLpfSCuDOBY0ri6jp9PLe505ljqwhwZz8ospy2vWhQlFu5GkIesh3FcDs4n7sWZODA==",
       "type": "package",
@@ -5803,6 +5845,23 @@
         "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll",
         "sqlitepclraw.provider.dynamic_cdecl.2.0.2.nupkg.sha512",
         "sqlitepclraw.provider.dynamic_cdecl.nuspec"
+      ]
+    },
+    "Superpower/2.3.0": {
+      "sha512": "L7ZLWjec5aPWWebsOKM6+8SdobSFMPJFIS8S8TT46oH2iELA70H95spRMeP1yPH9nDL/o+XYP29DPtVwVdzPeA==",
+      "type": "package",
+      "path": "superpower/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Superpower.dll",
+        "lib/net45/Superpower.xml",
+        "lib/netstandard1.0/Superpower.dll",
+        "lib/netstandard1.0/Superpower.xml",
+        "lib/netstandard2.0/Superpower.dll",
+        "lib/netstandard2.0/Superpower.xml",
+        "superpower.2.3.0.nupkg.sha512",
+        "superpower.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/5.6.3": {

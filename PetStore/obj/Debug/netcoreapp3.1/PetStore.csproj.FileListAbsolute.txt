@@ -65,6 +65,7 @@ C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Serilog.
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Serilog.Filters.Expressions.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
@@ -74,6 +75,7 @@ C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\SQLitePC
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Superpower.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -150,7 +152,6 @@ C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\runtimes
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\private\source\repos\PetStore\PetStore\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\private\source\repos\PetStore\PetStore\obj\Debug\netcoreapp3.1\PetStore.csprojAssemblyReference.cache
 C:\Users\private\source\repos\PetStore\PetStore\obj\Debug\netcoreapp3.1\staticwebassets\PetStore.StaticWebAssets.Manifest.cache
 C:\Users\private\source\repos\PetStore\PetStore\obj\Debug\netcoreapp3.1\staticwebassets\PetStore.StaticWebAssets.xml
 C:\Users\private\source\repos\PetStore\PetStore\obj\Debug\netcoreapp3.1\PetStore.MvcApplicationPartsAssemblyInfo.cs

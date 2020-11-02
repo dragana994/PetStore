@@ -1,0 +1,5 @@
+2020-11-02 21:30:11.017 +01:00 [INF] Request GET /index.html => 200
+2020-11-02 21:30:11.400 +01:00 [INF] Request GET /swagger/v1/swagger.json => 200
+2020-11-02 21:30:32.894 +01:00 [INF] Request DELETE /api/Product/5 => 401
+2020-11-02 21:30:50.614 +01:00 [INF] Request GET /index.html => 200
+2020-11-02 21:30:50.920 +01:00 [INF] Request GET /swagger/v1/swagger.json => 200
