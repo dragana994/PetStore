@@ -38,8 +38,6 @@ namespace PetStoreTest
 				productMockValidator.Object);
 		}
 
-		#region ProductService
-
 		[Theory]
 		[InlineData(true)]
 		[InlineData(false)]
@@ -99,8 +97,6 @@ namespace PetStoreTest
 
 			Assert.Null(service.GetById(1));
 		}
-
-		#endregion
 
 		private void InitializeList()
 		{

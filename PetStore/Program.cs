@@ -31,7 +31,7 @@ namespace PetStore
 				webBuilder.UseStartup<Startup>();
 			})
 			.UseSerilog((hostingContext, loggerConfig) =>
-			loggerConfig.ReadFrom.Configuration(hostingContext.Configuration)
+					loggerConfig.ReadFrom.Configuration(hostingContext.Configuration)
 			);
 	}
 }
